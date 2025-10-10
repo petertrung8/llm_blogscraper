@@ -11,5 +11,4 @@ wheels/
 
 # Data
 saved_articles/
-processed_posts.json
-.DS_Store
+*.json
