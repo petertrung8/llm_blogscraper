@@ -1,5 +1,6 @@
 import json
 import tqdm
+import re
 import subprocess
 
 # Paths to your files
