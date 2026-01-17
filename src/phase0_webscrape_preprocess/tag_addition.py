@@ -4,12 +4,12 @@ import re
 import subprocess
 
 # Paths to your files
-BLOG_FILE = "processed_posts.json"   # your JSON file
+BLOG_FILE = "articles.json"   # your JSON file
 TAGS_FILE = "tags.txt"         # list of possible tags, one per line
 OUTPUT_FILE = "tagged_posts.json"
 
 # Ollama model name
-MODEL = "gemma3:12b"  # or whatever model you have (e.g., mistral, gemma, etc.)
+MODEL = "gemma3"  # or whatever model you have (e.g., mistral, gemma, etc.)
 
 def call_ollama(prompt, model=MODEL):
     """Call Ollama CLI with a prompt and return the response text."""

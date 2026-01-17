@@ -205,6 +205,7 @@ def parse_markdown_file(path: Path):
 
 def main(input_dir: str, output_json: str):
     md_paths = list(Path(input_dir).rglob("*.md"))
+    print(f'Found {len(md_paths)} articles')
     articles = []
     for p in sorted(md_paths):
         try:
@@ -225,6 +226,7 @@ def main(input_dir: str, output_json: str):
 
     with open(output_json, "w", encoding="utf-8") as f:
         json.dump(articles, f, ensure_ascii=False, indent=2)
+    print(f"Json file created!")
 
 if __name__ == "__main__":
     import sys
