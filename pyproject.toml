@@ -9,7 +9,9 @@ dependencies = [
     "html2text>=2025.4.15",
     "lxml>=6.0.2",
     "markdown>=3.9",
+    "minsearch>=0.0.7",
     "requests>=2.32.5",
     "selenium>=4.36.0",
+    "sentence-transformers>=5.2.0",
     "tqdm>=4.67.1",
 ]
