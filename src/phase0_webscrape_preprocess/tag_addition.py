@@ -7,6 +7,7 @@ import subprocess
 BLOG_FILE = "articles.json"   # your JSON file
 TAGS_FILE = "tags.txt"         # list of possible tags, one per line
 OUTPUT_FILE = "tagged_posts.json"
+TEXT_CHUNK = 2000
 
 # Ollama model name
 MODEL = "gemma3"  # or whatever model you have (e.g., mistral, gemma, etc.)
@@ -51,7 +52,7 @@ def main():
 
     # Process posts
     for post in tqdm.tqdm(posts):
-        text_sample = post["text"][:1200]  # truncate long text
+        text_sample = post["text"][:TEXT_CHUNK]  # truncate long text
         prompt = f"""
 You are a blog content tagging assistant.
 Given the following list of tags, choose all tags that are relevant to this blog post.
